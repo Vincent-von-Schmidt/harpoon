@@ -30,7 +30,7 @@ vim.api.nvim_create_autocmd("FileType", {
         -- Open harpoon file choice in useful ways
         --
         -- vertical split (control+v)
-        vim.keymap.set("n", "<C-V>", function()
+        vim.keymap.set("n", "<leader>to", function()
             local curline = vim.api.nvim_get_current_line()
             local working_directory = vim.fn.getcwd() .. "/"
             vim.cmd("vs")
@@ -38,7 +38,7 @@ vim.api.nvim_create_autocmd("FileType", {
         end, { buffer = true, noremap = true, silent = true })
 
         -- horizontal split (control+x)
-        vim.keymap.set("n", "<C-x>", function()
+        vim.keymap.set("n", "<leader>tp", function()
             local curline = vim.api.nvim_get_current_line()
             local working_directory = vim.fn.getcwd() .. "/"
             vim.cmd("sp")
